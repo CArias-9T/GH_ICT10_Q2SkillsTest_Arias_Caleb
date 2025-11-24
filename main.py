@@ -1,5 +1,6 @@
 from pyscript import display, document
 
+# clubs, dictionary in a dictionary
 club_info = {
     "Glee Club":{
       
@@ -26,13 +27,13 @@ club_info = {
     }
 }
 
-def clubdetails(e):
+def clubdetails(e): # function gets data from dropdown, to then display
 
-    values = document.getElementById('cluboptions').value
+    values = document.getElementById('cluboptions').value # getting data
     data_display = club_info[values]
     document.getElementById("output").innerHTML = ""
 
-    display(f"{values}", target="output")
+    display(f"{values}", target="output") # displaying data
     display(f"Description: {data_display['Description']}", target="output")
     display(f"Meeting Time: {data_display['Meeting Time']}", target="output")
     display(f"Location: {data_display['Location']}", target="output")
